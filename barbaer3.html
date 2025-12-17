@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact &amp; Hours - SD Barber Shop</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af37",
+                        "background-light": "#0b0b0b",
+                        "background-dark": "#0b0b0b",
+                        "dark-card": "#111111",
+                        "urban-gray": "#b39b52",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                    boxShadow: {
+                        'neon': '0 0 15px rgba(249, 245, 6, 0.4)',
+                        'neon-strong': '0 0 25px rgba(249, 245, 6, 0.6)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Spline Sans", "Noto Sans", sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#181811] dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
+<div id="site-header"></div>
+<!-- Main Content -->
+<main class="flex-grow w-full px-4 md:px-10 py-8 md:py-12 mx-auto max-w-[1280px]">
+<!-- Page Heading -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-12">
+<div class="flex flex-col gap-2">
+<h1 class="text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] uppercase">Visit the Shop</h1>
+<p class="text-urban-gray dark:text-gray-400 text-lg font-normal">Modern Urban Luxury Street Style</p>
+</div>
+<div class="flex items-center gap-2 text-urban-gray dark:text-gray-400 text-sm font-medium">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span>123 Urban Ave, Downtown District</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Visual / Image Side -->
+<div class="lg:col-span-5 h-full min-h-[300px] lg:min-h-[500px] rounded-xl overflow-hidden relative group">
+<img alt="Barber working on a client in a modern urban barbershop setting with vintage chairs" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale hover:grayscale-0" data-alt="Barber working on a client in a modern urban barbershop setting with vintage chairs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVPAjYAN8rNLIoo0rX72rggXS_ES_yM7t-al3JEyF4mUAJZt_G5uQNAOdrQSqajmEgdr_dmvazuAOBvVILZHh6LtpvHRjdYSdCKkEb6EZDgZCYVm5bOo877D8t6vLGb-hj1a2BlztJ82zcDugxafd8vVD7voLiwWPUSF59vKAAIGgJMU_4cY6Dm0rbuG5YHm9npm9HkFocgybOXknGAiyhbWHLswXSrwGQjJwpPIWt3dOK3sf2et9qGdYjOCVG0I-XEQDnFyV79rCp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
+<span class="text-white font-bold text-xl mb-1">Find Us</span>
+<a class="text-primary hover:text-white transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-wider" href="#">
+                        Get Directions <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Hours & CTA Card (The "Dark" Section) -->
+<div class="lg:col-span-7 flex flex-col">
+<div class="flex-1 bg-dark-card rounded-xl p-8 md:p-12 text-white relative overflow-hidden border border-gray-800 shadow-2xl">
+<!-- Glowing accent line -->
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-80 shadow-neon"></div>
+<!-- Header of Card -->
+<div class="flex flex-wrap justify-between items-center gap-4 mb-10 border-b border-gray-800 pb-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+<h2 class="text-2xl md:text-3xl font-bold tracking-tight">Business Hours</h2>
+</div>
+<!-- Dynamic Status Badge -->
+<div class="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full pl-3 pr-4 py-1.5 backdrop-blur-sm">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+<span class="text-sm font-bold text-primary tracking-wide uppercase">Open Today</span>
+</div>
+</div>
+<!-- Hours List -->
+<div class="space-y-6 mb-12">
+<div class="group flex justify-between items-end border-b border-dashed border-gray-700 pb-2 hover:border-primary/50 transition-colors">
+<span class="text-gray-400 text-lg font-medium group-hover:text-white transition-colors">Monday – Friday</span>
+<span class="text-white text-xl font-bold tracking-wide">9:00 AM – 6:00 PM</span>
+</div>
+<div class="group flex justify-between items-end border-b border-dashed border-gray-700 pb-2 hover:border-primary/50 transition-colors">
+<span class="text-gray-400 text-lg font-medium group-hover:text-white transition-colors">Saturday</span>
+<span class="text-white text-xl font-bold tracking-wide">9:00 AM – 5:00 PM</span>
+</div>
+<div class="group flex justify-between items-end border-b border-dashed border-gray-700 pb-2 hover:border-primary/50 transition-colors">
+<span class="text-gray-400 text-lg font-medium group-hover:text-white transition-colors">Sunday</span>
+<span class="text-white text-xl font-bold tracking-wide">9:00 AM – 3:00 PM</span>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="bg-white/5 rounded-lg p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-white/5 relative overflow-hidden">
+<!-- Background glow decoration -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-primary/20 blur-[60px] rounded-full pointer-events-none"></div>
+<div class="relative z-10 text-center md:text-left">
+<p class="text-primary text-sm font-bold uppercase tracking-widest mb-1">Walk-ins Welcome</p>
+<h3 class="text-2xl font-black italic tracking-[-0.02em]">"Stay Sharp. Stay Confident."</h3>
+</div>
+<button class="relative z-10 group flex items-center justify-center gap-2 bg-primary hover:bg-white text-black text-base font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-neon hover:shadow-neon-strong transform hover:-translate-y-0.5 whitespace-nowrap w-full md:w-auto">
+<span>Book Your Cut Today</span>
+<span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div id="site-footer"></div>
+<script src="assets/main.js"></script>
+</body></html>

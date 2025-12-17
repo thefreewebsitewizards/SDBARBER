@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SD Barber Shop - Precision. Style. Confidence.</title>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af37",
+                        "background-light": "#0b0b0b",
+                        "background-dark": "#0b0b0b",
+                        "surface-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                    backgroundImage: {
+                        'barber-stripe': 'linear-gradient(135deg, #ffffff 25%, #181811 25%, #181811 50%, #ffffff 50%, #ffffff 75%, #181811 75%, #181811 100%)',
+                        'barber-stripe-yellow': 'linear-gradient(135deg, #d4af37 25%, #181811 25%, #181811 50%, #d4af37 50%, #d4af37 75%, #181811 75%, #181811 100%)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for modern feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #181811; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#181811] dark:text-white font-display overflow-x-hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+<div id="site-header"></div>
+<!-- Hero Section -->
+<section class="relative flex flex-col items-center justify-center min-h-[90vh] w-full overflow-hidden bg-black">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" data-alt="Barber working on a client's hair in a dark, moody barbershop setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCG00InvpXX83hgLJjaowsT5PFlS5R5-A0-eT-zv8BsU9TZoiRAr0nny85x75Du2L4yaQBz4Lz0p1vCrm9aLdGDMoZYLZGUCDK_UL5RlkSVw7LsWwsB8QGlNEQ814U24tu68S08ZasvYGj-5q-W8AloWHEv9D3ZI0kZj9Yp-wC25hcYCXvAxVfYmqeiAXtlBpM2nY3FPwDir4iiNlS5dbbcYcbXCMI7VqFhoUI7Gga6Mku18z9IHk4ChySadDz_wSHVBJatnTCKw5GX');">
+</div>
+<div class="absolute inset-0 z-0 bg-gradient-to-t from-black via-black/70 to-black/40"></div>
+<!-- Modern Barber Pole Element (Static CSS) -->
+<div class="absolute right-0 top-1/2 -translate-y-1/2 h-96 w-4 md:w-8 bg-surface-dark border-l border-white/10 hidden lg:block overflow-hidden rounded-l-2xl shadow-2xl z-10">
+<div class="w-full h-[200%] bg-barber-stripe-yellow opacity-80" style="background-size: 20px 20px;"></div>
+</div>
+<div class="relative z-10 container mx-auto px-4 md:px-10 flex flex-col items-center text-center max-w-4xl pt-20">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-bold text-white uppercase tracking-wider">Accepting Walk-ins</span>
+</div>
+<h1 class="text-white text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter mb-6 drop-shadow-2xl">
+                    Precision.<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Style.</span><br/>
+<span class="text-primary">Confidence.</span>
+</h1>
+<p class="text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mb-10">
+                    New-generation cuts, sharp fades, and clean beards. We engineer your look with urban precision.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<button class="flex items-center justify-center h-14 px-8 rounded-full bg-primary text-[#181811] text-base font-bold tracking-wide hover:scale-105 hover:shadow-[0_0_30px_rgba(249,245,6,0.5)] transition-all duration-300 transform">
+                        Book Appointment
+                    </button>
+<button class="flex items-center justify-center h-14 px-8 rounded-full bg-transparent border-2 border-white/30 text-white text-base font-bold tracking-wide hover:bg-white hover:text-black hover:border-white transition-all duration-300 backdrop-blur-sm">
+                        View Prices
+                    </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
+<span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
+</div>
+</section>
+<!-- Feature Section / About -->
+<section class="py-20 md:py-32 px-4 md:px-10 bg-background-light dark:bg-background-dark relative overflow-hidden">
+<!-- Background Texture -->
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="container mx-auto max-w-[1280px]">
+<div class="flex flex-col lg:flex-row gap-16 items-start">
+<!-- Text Content -->
+<div class="flex flex-col gap-6 lg:w-1/3 sticky top-32">
+<h2 class="text-[#181811] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">
+                            Why SD <br/><span class="text-primary">Barber Shop</span>
+</h2>
+<p class="text-gray-600 dark:text-gray-300 text-lg font-normal leading-relaxed">
+                            We don't just cut hair; we engineer confidence. Experience the sharpest modern cuts in the city designed for the modern gentleman.
+                        </p>
+<div class="h-1 w-20 bg-primary mt-4 rounded-full"></div>
+</div>
+<!-- Feature Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:w-2/3 w-full">
+<!-- Card 1 -->
+<div class="group flex flex-col gap-6 rounded-2xl border border-[#e6e6db] dark:border-white/10 bg-white dark:bg-surface-dark p-8 hover:border-primary/50 transition-colors duration-300 shadow-sm hover:shadow-xl dark:shadow-none">
+<div class="w-14 h-14 rounded-full bg-background-light dark:bg-white/5 flex items-center justify-center text-[#181811] dark:text-primary group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">content_cut</span>
+</div>
+<div>
+<h3 class="text-[#181811] dark:text-white text-xl font-bold mb-2">Expert Barbers</h3>
+<p class="text-gray-500 dark:text-gray-400">Masters of the fade and beard lineup. Our team is trained in both classic techniques and modern trends.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col gap-6 rounded-2xl border border-[#e6e6db] dark:border-white/10 bg-white dark:bg-surface-dark p-8 hover:border-primary/50 transition-colors duration-300 shadow-sm hover:shadow-xl dark:shadow-none md:mt-12">
+<div class="w-14 h-14 rounded-full bg-background-light dark:bg-white/5 flex items-center justify-center text-[#181811] dark:text-primary group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<div>
+<h3 class="text-[#181811] dark:text-white text-xl font-bold mb-2">Clean Cuts</h3>
+<p class="text-gray-500 dark:text-gray-400">Precision detailing that lasts. We pay attention to the micro-details that others miss.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col gap-6 rounded-2xl border border-[#e6e6db] dark:border-white/10 bg-white dark:bg-surface-dark p-8 hover:border-primary/50 transition-colors duration-300 shadow-sm hover:shadow-xl dark:shadow-none">
+<div class="w-14 h-14 rounded-full bg-background-light dark:bg-white/5 flex items-center justify-center text-[#181811] dark:text-primary group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</div>
+<div>
+<h3 class="text-[#181811] dark:text-white text-xl font-bold mb-2">Modern Style</h3>
+<p class="text-gray-500 dark:text-gray-400">Setting trends, not just following them. We help you find the look that defines you.</p>
+</div>
+</div>
+<!-- Card 4 (Image) -->
+<div class="hidden md:flex flex-col rounded-2xl overflow-hidden h-full min-h-[240px] relative md:mt-12">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Close up of barber tools and clippers on a table" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDmhc2Awq2AXhTppGwJmWjPHSByGhANdwcFisA33zTjOt-bLoKdcYxIm-CjbCkuK_KPD5eQ8D3RYoJJJfp84HvfLWFZ0_-MpVNjQTIqo7GRvwW-ul0jcUlDTBJI3w9dBtPi_iIKT0opYMDkD0LLQiBLBDVUwsyav2Y-9-Bd0v3MllRKx1kG6OtyvtiimeHQnwR3ZclPZFIKLjQ-8VT1o4EPIa_pcPOM5rptAq902nWnk-Mb1sQtx-vwpEQYpv1nIHB6em1T2cuzxx95');">
+</div>
+<div class="absolute inset-0 bg-black/20 hover:bg-black/10 transition-colors"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div id="site-footer"></div>
+</div>
+<script src="assets/main.js"></script>
+</body></html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery - SD Barber Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#d4af37",
+            "background-light": "#0b0b0b",
+            "background-dark": "#0b0b0b",
+          },
+          fontFamily: {
+            "display": ["Spline Sans", "Noto Sans", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    /* Custom scrollbar for better visual on desktop */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent; 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #ccc; 
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #aaa; 
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#181811] dark:text-white font-display overflow-x-hidden transition-colors duration-200">
+<!-- Main Layout Wrapper -->
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<div id="site-header"></div>
+<!-- Main Content Container -->
+<main class="flex-1 flex flex-col items-center py-10 px-4 md:px-10 lg:px-40">
+<div class="flex flex-col w-full max-w-[1200px] gap-8">
+<!-- Page Heading & Intro -->
+<section class="flex flex-col md:flex-row md:justify-between md:items-end gap-6 px-4">
+<div class="flex flex-col gap-3 max-w-2xl">
+<h1 class="text-[#181811] dark:text-white text-5xl md:text-6xl font-black leading-[0.9] tracking-[-0.033em] uppercase">
+              The Cuts
+            </h1>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+<p class="text-[#5e5d4d] dark:text-[#a3a295] text-lg font-normal leading-relaxed mt-2 max-w-lg">
+              Mastery in every detail. Explore our portfolio of precision fades, classic cuts, and beard sculpting.
+            </p>
+</div>
+<!-- Quick Stats / Badge -->
+<div class="hidden md:flex flex-col items-end">
+<div class="flex items-center gap-2">
+<span class="text-3xl font-bold text-primary">500+</span>
+<span class="text-sm font-medium text-[#181811] dark:text-white">Styles<br/>Created</span>
+</div>
+</div>
+</section>
+<!-- Filter Chips -->
+<section class="w-full overflow-x-auto pb-2 px-2">
+<div class="flex gap-3 min-w-max">
+<!-- Active Chip -->
+<button class="group flex h-10 items-center justify-center gap-x-2 rounded-full bg-primary pl-6 pr-6 transition-transform hover:scale-105 active:scale-95">
+<p class="text-[#181811] text-sm font-bold leading-normal">All</p>
+</button>
+<!-- Inactive Chips -->
+<button class="group flex h-10 items-center justify-center gap-x-2 rounded-full bg-[#e5e5e0] dark:bg-[#3a3928] pl-6 pr-6 hover:bg-[#d6d6d0] dark:hover:bg-[#4a4938] transition-all hover:scale-105 active:scale-95">
+<p class="text-[#181811] dark:text-white text-sm font-medium leading-normal">Fades</p>
+</button>
+<button class="group flex h-10 items-center justify-center gap-x-2 rounded-full bg-[#e5e5e0] dark:bg-[#3a3928] pl-6 pr-6 hover:bg-[#d6d6d0] dark:hover:bg-[#4a4938] transition-all hover:scale-105 active:scale-95">
+<p class="text-[#181811] dark:text-white text-sm font-medium leading-normal">Beards</p>
+</button>
+<button class="group flex h-10 items-center justify-center gap-x-2 rounded-full bg-[#e5e5e0] dark:bg-[#3a3928] pl-6 pr-6 hover:bg-[#d6d6d0] dark:hover:bg-[#4a4938] transition-all hover:scale-105 active:scale-95">
+<p class="text-[#181811] dark:text-white text-sm font-medium leading-normal">Designs</p>
+</button>
+<button class="group flex h-10 items-center justify-center gap-x-2 rounded-full bg-[#e5e5e0] dark:bg-[#3a3928] pl-6 pr-6 hover:bg-[#d6d6d0] dark:hover:bg-[#4a4938] transition-all hover:scale-105 active:scale-95">
+<p class="text-[#181811] dark:text-white text-sm font-medium leading-normal">Lineups</p>
+</button>
+<button class="group flex h-10 items-center justify-center gap-x-2 rounded-full bg-[#e5e5e0] dark:bg-[#3a3928] pl-6 pr-6 hover:bg-[#d6d6d0] dark:hover:bg-[#4a4938] transition-all hover:scale-105 active:scale-95">
+<p class="text-[#181811] dark:text-white text-sm font-medium leading-normal">Before/After</p>
+</button>
+</div>
+</section>
+<!-- Masonry Grid Gallery -->
+<section class="px-2">
+<div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+<!-- Gallery Item 1 (Tall) -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-zoom-in">
+<div class="bg-gray-200 dark:bg-gray-800 aspect-[3/4]">
+<img alt="Barber giving a close shave with a straight razor" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Barber giving a close shave with a straight razor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALdOiVP7B7RxxMLxYP_xjWmHIxY6689Lx0GQdClRtrrFTagioiIdP24a3maCNGEFvcdBMp5MgVR_68YbdpZHynbz6lTXniHnj67CsrJIMiC-xGRj8iLdnysoSL4jZTOXGPLGniqeecYYer8dSHOK5GcKjuXp_OxYR7Sxcyg-MC6UY-yMiCcB5k0oZ-2L4om7-qNWgox9xYBKFxDQnRP-UhEfg4Ks2plnAN4G8S3SHJAD5aSEHB1AEcXqq586c2iifuVWLNRRqy0kKE"/>
+</div>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white text-xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Hot Towel Shave</h3>
+<p class="text-primary text-sm font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">By Marcus</p>
+</div>
+</div>
+<!-- Gallery Item 2 (Square) -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-zoom-in">
+<div class="bg-gray-200 dark:bg-gray-800 aspect-square">
+<img alt="Side profile of a man with a fresh fade haircut" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Side profile of a man with a fresh fade haircut" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn2k6eI1QGjkcOQ2iDvI_w-J9A2cFDIEdDXhJrycrLA7Us3dPJRei1s58E8q8O7KrciyGU5ULlyx5GqndPBTSOrHTQCogeiUhtLqJVjQFLFrZrRkrKpjmqTQQve6UEEdTpMXzdWZwkBEiBcVhbU5Nsy-wZQwP9mdmlb5PB1ChqmqwkHWQ7cA-QRFs1JOTW1fxcWR8XbkVIAtqNwbaPBb97mvxNLSJnnUIlwJ3kdcEQIN0nDCWfW6fI1xU5ki5i2_Gm_XLCjlKkaip1"/>
+</div>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white text-xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Skin Fade</h3>
+<p class="text-primary text-sm font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">By David</p>
+</div>
+</div>
+<!-- Gallery Item 3 (Wide/Short) -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-zoom-in">
+<div class="bg-gray-200 dark:bg-gray-800 aspect-[4/3]">
+<img alt="Close up of barber tools and scissors" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of barber tools and scissors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2G8SoUd0uXGmpnYkteklT9sXeEwLqfof5zqxJcbwfCcmmDKqzb2POWxCMRMqTJ7U8FGx8tUKaGOA_KGLiDFosMxoWb4axJ-bDtlKXZkfKL2Z2WNrOTqxRHCHkelAHKBqZbbpEaL9-F5KyQGugSQeLPEM_Ra-9HkeKOfkOoELmIsAKxNy1JyCwOv6nWrGaLe0GOT6XoBSgzw4PRjR4MtTbw7QzWE0I_SV_3Ku2hyQ5cxxsFeHIWJY6EzB-g5ALB4cLwa_sN1JQ5Gyl"/>
+</div>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white text-xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Tool of Trade</h3>
+<p class="text-primary text-sm font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Shop Atmosphere</p>
+</div>
+</div>
+<!-- Gallery Item 4 (Square) -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-zoom-in">
+<div class="bg-gray-200 dark:bg-gray-800 aspect-square">
+<img alt="Man with well groomed beard looking at camera" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Man with well groomed beard looking at camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYWvLeZzDW5fOtgyuHvjwhqOCoUfHcwMv3iJHQ7_EQgoSV6HOaTBuoSvgfdIA60MWTgmEAPMfD34DVV5j0sDP5UXjFrLMRKWIlP-b2R0XXAlRSNnrlF1BOFCbmgOpHllDfFIDHpqZz_PEmMXVd3VhzUUGOThEQlWceZoY3jOl_2C6GK0HDH8dRQrk4rnl69Mt5Sb5q8IdSmssAUWB0KRQRdMnkyux-nOqT5yhrAfVqlRzuKYzyjajsb2NQVhUZb0YATGEhoWkF0O6e"/>
+</div>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white text-xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Beard Sculpting</h3>
+<p class="text-primary text-sm font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">By Alex</p>
+</div>
+</div>
+<!-- Gallery Item 5 (Tall) -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-zoom-in">
+<div class="bg-gray-200 dark:bg-gray-800 aspect-[3/4]">
+<img alt="Detailed hair tattoo design on the side of head" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Detailed hair tattoo design on the side of head" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEHO0ItB1TiqmMJar6u8EZ-91681USVQ6wv3DXybrfF7OWSYY5qiydsHtDBP4amOagBcNLEfTCvBTsAKrQmlRG-NS07uVnaaohP87qQ53XK24iCMH_6sVrLc9cCdCoL7KXvh3MBq_LoZe1Kzupgr_QcUBiG6-0kRXpJgRI8Bg0ptykdSFtdMLeWkADHOLgC4hUNy5R2lqDMXyslIuKQA9DiqidLr4tsau4BGTdRgyKAbpV3dKLIgLbnJmWyl4LdiE5j6H3w_HPfz2Z"/>
+</div>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white text-xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Geometric Design</h3>
+<p class="text-primary text-sm font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">By Marcus</p>
+</div>
+</div>
+<!-- Gallery Item 6 (Square) -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-zoom-in">
+<div class="bg-gray-200 dark:bg-gray-800 aspect-square">
+<img alt="Barber styling hair with product" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Barber styling hair with product" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn4sBiN2G4UDUH_f06XY-g2755MmaAjmo3WAdc4ArlB2jbQwx3Fhv-6gVufNBY6Ai4JNmjtIT9WtL0vEoCXklqM1shLpZDeNQxqt0in2TRFlDhsqMu8pgNWTZWNYoNcx3_8ldsMrsYbXoS6q4nD1egGmlD3YTfNcnnMiyE_KVzhSb-z70uF4tLeJ5iEAwVCfXHjK-lmp9smXDuZPb48SwRrZpOXFmOmHuGEZO4pv9Vi57GffP4KOHlGeQ2R3aijsL6LwLa5IbYL_Y7"/>
+</div>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white text-xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Textured Crop</h3>
+<p class="text-primary text-sm font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">By Sarah</p>
+</div>
+</div>
+<!-- Gallery Item 7 (Tall) -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-zoom-in">
+<div class="bg-gray-200 dark:bg-gray-800 aspect-[3/4]">
+<img alt="Modern pompadour haircut side view" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern pompadour haircut side view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxliUXcsj5ss6IsoHgn4ZkQb_Ayx_6CQylsDmakl62OyhT0cb7Ggv0G42Bdx1SRlroeA0bAp6Q5neD6J0Y466ZzsriW3XtHu5Km7WvmCyY35teqElOw5IOiaqZ6VvUbAd8bimbsWVTjBIxbMI2LM-uvo3POmK2Nb5Rx-pM88VJbYDCHGboS6-pzwolZffpx8-7GdkHBbqC4Bz5ya5cq_Q8Bhl5uQsJLDDfYfl5O3TrUXsmUtubq3jd4JLltZC80LVzk3meWwrivHsv"/>
+</div>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white text-xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Classic Pomp</h3>
+<p class="text-primary text-sm font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">By David</p>
+</div>
+</div>
+<!-- Gallery Item 8 (Wide) -->
+<div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-zoom-in">
+<div class="bg-gray-200 dark:bg-gray-800 aspect-[16/9]">
+<img alt="Interior of the barbershop with leather chairs" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Interior of the barbershop with leather chairs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT9OyvwWILSGET1Wi7dioV-2EjMAioEcVLww-4pYhirqJ9wLld-a_XwURaGywqE20xECiSL91ltGL583TE625BpQr_6xQDN7wAYYwv82cTJ6Sk1GuHgV6O8sp8sPf2OQkOLNTj0HkZG2bsNc2uJEjIngiSh_zPxVLr9KkImRU9tTwKsVRaMxi49vsvL8nQOodKXQRL1yDYTA0PClDUxHX5kY3C1vbvQ2ucX8iU-yeAlIfE4gTjpPvDuYmpRKvVjMSib8XjoquRxdkK"/>
+</div>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<h3 class="text-white text-xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">The Shop</h3>
+<p class="text-primary text-sm font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">Urban Luxury</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pagination / Load More -->
+<div class="flex justify-center py-8">
+<button class="flex items-center gap-2 text-black dark:text-white font-bold hover:text-primary dark:hover:text-primary transition-colors">
+<span>Load More Styles</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<!-- CTA Section -->
+<section class="mt-8 rounded-[2rem] bg-[#e5e5e0] dark:bg-[#2a291f] overflow-hidden">
+<div class="flex flex-col md:flex-row items-center justify-between p-10 md:p-16 gap-8 text-center md:text-left">
+<div class="flex flex-col gap-4 max-w-xl">
+<h2 class="text-[#181811] dark:text-white tracking-tight text-3xl md:text-4xl font-black leading-tight">
+                Seen enough?<br/>Let's get you fresh.
+              </h2>
+<p class="text-[#5e5d4d] dark:text-[#a3a295] text-base font-normal leading-normal">
+                Book your appointment today and experience the difference. Our barbers are ready to upgrade your look.
+              </p>
+</div>
+<div class="shrink-0">
+<button class="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-primary hover:bg-[#dcd905] transition-all transform hover:scale-105 active:scale-95 text-[#181811] text-lg font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20">
+<span class="truncate">Book Appointment</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<div id="site-footer"></div>
+</div>
+<script src="assets/main.js"></script>
+</body></html>

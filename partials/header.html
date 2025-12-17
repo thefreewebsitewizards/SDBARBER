@@ -1,0 +1,100 @@
+<!-- Shared Header (Injected on all pages) -->
+<header class="fixed top-0 left-0 z-50 w-full bg-white border-b border-black/10">
+  <div class="layout-container flex justify-center w-full">
+    <div class="max-w-[1280px] w-full px-4 md:px-10 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 text-black">
+        <span class="material-symbols-outlined text-3xl text-black">content_cut</span>
+        <h2 class="text-xl font-bold leading-tight tracking-tight">SD Barber Shop</h2>
+      </a>
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <nav class="flex items-center gap-6">
+          <a class="nav-link text-black text-sm font-medium hover:opacity-70 transition-colors" href="index.html" data-link="home">Home</a>
+<a class="nav-link text-black text-sm font-medium hover:opacity-70 transition-colors" href="barber1.html" data-link="services">Services</a>
+<a class="nav-link text-black text-sm font-medium hover:opacity-70 transition-colors" href="barbaer2.html" data-link="gallery">Gallery</a>
+<a class="nav-link text-black text-sm font-medium hover:opacity-70 transition-colors" href="barbaer3.html" data-link="contact">Contact</a>
+        </nav>
+        <button class="book-now flex min-w-[84px] cursor-pointer items-center justify-center rounded-full h-10 px-6 bg-white text-black border border-black text-sm font-medium hover:opacity-80 transition" data-action="book">
+          <span class="truncate">Book Now</span>
+        </button>
+      </div>
+      <!-- Mobile Menu Icon -->
+      <button class="md:hidden text-black" id="mobile-menu-toggle" aria-label="Open menu">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="h-16"></div>
+
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="fixed inset-0 z-[60] hidden">
+  <div class="absolute inset-0 bg-black/60" data-close-mobile></div>
+  <div class="absolute right-0 top-0 h-full w-72 bg-white shadow border-l border-black/10 p-6">
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-2 text-black">
+        <span class="material-symbols-outlined text-2xl text-black">content_cut</span>
+        <span class="font-bold">SD Barber Shop</span>
+      </div>
+      <button class="text-[#181811] dark:text-white" id="mobile-menu-close" aria-label="Close menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-4">
+      <a class="nav-link text-black text-sm font-medium hover:opacity-70 transition-colors" href="index.html" data-link="home">Home</a>
+<a class="nav-link text-black text-sm font-medium hover:opacity-70 transition-colors" href="barber1.html" data-link="services">Services</a>
+<a class="nav-link text-black text-sm font-medium hover:opacity-70 transition-colors" href="barbaer2.html" data-link="gallery">Gallery</a>
+<a class="nav-link text-black text-sm font-medium hover:opacity-70 transition-colors" href="barbaer3.html" data-link="contact">Contact</a>
+    </nav>
+    <button class="book-now mt-6 w-full flex items-center justify-center rounded-full h-11 bg-white text-black border border-black text-sm font-medium hover:opacity-80 transition" data-action="book">Book Now</button>
+  </div>
+</div>
+
+<!-- Booking Modal -->
+<div id="booking-modal" class="fixed inset-0 z-[70] hidden">
+  <div class="absolute inset-0 bg-black/60" data-close-booking></div>
+  <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] max-w-[560px] rounded-2xl bg-white dark:bg-surface-dark border border-[#e6e6db] dark:border-[#333] shadow-2xl">
+    <div class="p-6 md:p-8">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-[#181811] dark:text-white text-xl font-bold">Book an Appointment</h3>
+        <button class="text-[#181811] dark:text-white" id="booking-close" aria-label="Close">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <form id="booking-form" class="space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm text-gray-600 dark:text-gray-300">Full Name</label>
+            <input type="text" name="name" required class="mt-1 w-full rounded-lg border border-[#e6e6db] dark:border-[#333] bg-white dark:bg-transparent px-3 py-2" />
+          </div>
+          <div>
+            <label class="text-sm text-gray-600 dark:text-gray-300">Phone</label>
+            <input type="tel" name="phone" required class="mt-1 w-full rounded-lg border border-[#e6e6db] dark:border-[#333] bg-white dark:bg-transparent px-3 py-2" />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm text-gray-600 dark:text-gray-300">Service</label>
+            <select name="service" required class="mt-1 w-full rounded-lg border border-[#e6e6db] dark:border-[#333] bg-white dark:bg-transparent px-3 py-2">
+              <option value="Standard Cut">Standard Cut</option>
+              <option value="Skin Fade">Skin Fade</option>
+              <option value="Beard Trim">Beard Trim</option>
+              <option value="Kids/Seniors">Kids/Seniors</option>
+              <option value="After Hours">After Hours</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-sm text-gray-600 dark:text-gray-300">Preferred Date</label>
+            <input type="date" name="date" required class="mt-1 w-full rounded-lg border border-[#e6e6db] dark:border-[#333] bg-white dark:bg-transparent px-3 py-2" />
+          </div>
+        </div>
+        <div>
+          <label class="text-sm text-gray-600 dark:text-gray-300">Notes</label>
+          <textarea name="notes" rows="3" class="mt-1 w-full rounded-lg border border-[#e6e6db] dark:border-[#333] bg-white dark:bg-transparent px-3 py-2" placeholder="Any preferences or questions?"></textarea>
+        </div>
+        <button type="submit" class="w-full rounded-full h-12 bg-primary text-[#181811] text-sm font-bold tracking-wide hover:shadow-[0_0_15px_rgba(212,175,55,0.6)] transition-shadow">Confirm Booking</button>
+      </form>
+      <p id="booking-success" class="hidden mt-4 text-green-600 dark:text-green-400 text-sm font-medium">Thanks! We received your request and will confirm shortly.</p>
+    </div>
+  </div>
+</div>
